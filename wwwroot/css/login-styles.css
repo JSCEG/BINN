@@ -1761,7 +1761,7 @@ a[href*="https://botpress.com/?from=webchat"] {
     }
 
     .custom-play-btn {
-        background: rgba(139, 195, 74, 0.8);
+        background: #1f71c3c3;
     }
 }
 

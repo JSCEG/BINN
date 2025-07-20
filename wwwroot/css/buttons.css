@@ -30,7 +30,7 @@
 
 .btn:focus {
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(139, 195, 74, 0.25);
+    box-shadow: 0 0 0 0.25rem #1f71c37c;
     /* Sombra de foco con el color primario */
 }
 
@@ -345,4 +345,69 @@
 .dt-buttons .buttons-print:hover {
     background-image: linear-gradient(to right, #0aa2b8, #0a95a9) !important;
     border-color: #0a95a9 !important;
+}
+
+/* --------------------------------------------------------------------------
+   [5] BOTÓN CON EFECTO LATENTE (HEARTBEAT)
+   Crea un sutil efecto de "latido" para atraer la atención de forma elegante.
+-------------------------------------------------------------------------- */
+.btn-pulse {
+    color: var(--texto-sobre-color);
+    background-color: var(--color-oscuro-900); /* Azul oscuro del tema SNIER */
+    border-color: var(--color-oscuro-900);
+    transform-origin: center;
+    animation: heartbeat-effect 2.5s infinite ease-in-out;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-pulse:hover,
+.btn-pulse:focus {
+    background-color: var(--color-oscuro-700); /* Un azul ligeramente más claro en hover */
+    color: var(--texto-sobre-color);
+    animation-play-state: paused; /* Pausamos el latido en hover */
+    transform: scale(1.05); /* Lo dejamos ligeramente más grande en hover */
+}
+
+/* Keyframes para la animación de latido */
+@keyframes heartbeat-effect {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.03);
+    }
+    20% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.03);
+    }
+    40% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   [5] BOTÓN CON ESTILO DE ENLACE
+   Para acciones que deben parecer un hipervínculo pero son botones.
+-------------------------------------------------------------------------- */
+.btn-link {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-primario); /* O el color que prefieras para el enlace */
+    text-decoration: underline;
+    padding: 0; /* Eliminamos el padding para que se ajuste al texto */
+    box-shadow: none;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-primario-700); /* Un tono más oscuro en hover */
+    box-shadow: none;
+    transform: none; /* Anulamos la transformación de otros botones */
 }

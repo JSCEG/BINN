@@ -40,7 +40,7 @@
     --color-secundario: #606060;
     /* Gris del logo */
     /* --color-fondo-oscuro: #022336; */
-    --color-fondo-oscuro: #022336;
+    --color-fondo-oscuro: #0f2e51cc;
     /* Azul oscuro del logo */
     --glass-gradient-bg: linear-gradient(to right, #0f2e51cc, #1f71c3c3);
     --opaque-gradient-bg: linear-gradient(to right, #022336, #0b8aae);
@@ -117,7 +117,7 @@
     --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
     --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
     --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
-    --shadow-glow: 0 0 20px rgba(139, 195, 74, 0.3);
+    --shadow-glow: 0 0 20px #0f2e51cc;
 
     /* Transiciones sistemáticas */
     --transition-fast: 150ms ease-out;
@@ -167,17 +167,17 @@
     --font-weight-black: 900;
 
     /* Colores de estado con variaciones */
-    --color-primario-50: #f0f9e8;
-    --color-primario-100: #d9f0c4;
-    --color-primario-200: #bde69c;
-    --color-primario-300: #a1dc74;
-    --color-primario-400: #8bd057;
-    --color-primario-500: #8BC34A;
+    --color-primario-50: #fdeee7;
+    --color-primario-100: #fbdcc3;
+    --color-primario-200: #f7c2a0;
+    --color-primario-300: #f3a87d;
+    --color-primario-400: #f08e5a;
+    --color-primario-500: #EC7437;
     /* Color base */
-    --color-primario-600: #7cb342;
-    --color-primario-700: #689f38;
-    --color-primario-800: #558b2f;
-    --color-primario-900: #33691e;
+    --color-primario-600: #d46931;
+    --color-primario-700: #b95b2a;
+    --color-primario-800: #9f4e24;
+    --color-primario-900: #85411d;
 
     /* Azul oscuro con variaciones */
     --color-oscuro-50: #e8f2ff;
@@ -1175,16 +1175,24 @@ footer .small {
     scroll-padding-right: 3%;
 }
 
-/* leyendas IHH */
-.leyendas {
-    font-size: 10px;
-    margin-top: 20px;
-    /* Ajusta según sea necesario */
+/* Keyframes para la animación de pulso al cargar */
+@keyframes initial-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(236, 116, 55, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 15px rgba(236, 116, 55, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(236, 116, 55, 0);
+    }
 }
 
-.leyenda-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    /* Espacio entre leyendas */
+/* Aplicar la animación a los botones principales */
+.hero-actions .btn-primary,
+.login-btn-primary {
+    animation: initial-pulse 1.5s 2; /* La animación se ejecuta dos veces */
 }
