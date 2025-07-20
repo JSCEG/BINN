@@ -1,0 +1,51 @@
+/*
+ * ==========================================================================
+ * LAYOUT FINAL - LA ÚNICA FUENTE DE VERDAD (V2 - Header Fijo)
+ * ==========================================================================
+ */
+
+/* --- 1. VARIABLES DE TAMAÑO --- */
+:root {
+  --header-height: 65px;
+  --sidebar-width: 260px;
+}
+
+/* --- 2. CONTENIDO PRINCIPAL (TODAS LAS PANTALLAS) --- */
+.main-content {
+  padding-top: 0;
+  /* Espacio para el header fijo */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* --- 3. REGLAS SOLO PARA ESCRITORIO (SIDEBAR) --- */
+@media (min-width: 992px) {
+  #sidebarDesktop {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    height: calc(100vh - var(--header-height));
+    width: var(--sidebar-width);
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+
+  .main-content {
+    margin-left: var(--sidebar-width);
+  }
+
+  /* Estado colapsado */
+  body.sidebar-collapsed #sidebarDesktop {
+    transform: translateX(-100%);
+  }
+
+  body.sidebar-collapsed .main-content {
+    margin-left: 0;
+  }
+}
+
+/* --- 4. REGLAS PARA MÓVIL (SIDEBAR) --- */
+@media (max-width: 991.98px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
