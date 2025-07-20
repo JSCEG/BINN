@@ -35,14 +35,14 @@
  */
 :root {
     /* Paleta de Colores Principal (Basada en el logo) */
-    --color-primario: #8BC34A;
+    --color-primario: #EC7437;
     /* Verde lima del logo */
     --color-secundario: #606060;
     /* Gris del logo */
     /* --color-fondo-oscuro: #022336; */
     --color-fondo-oscuro: #022336;
     /* Azul oscuro del logo */
-    --glass-gradient-bg: linear-gradient(to right, rgba(2, 35, 54, 0.75), rgba(11, 138, 174, 0.75));
+    --glass-gradient-bg: linear-gradient(to right, #0f2e51cc, #1f71c3c3);
     --opaque-gradient-bg: linear-gradient(to right, #022336, #0b8aae);
 
     /* Paleta de Acciones (Podemos mantener estos para consistencia en UI) */

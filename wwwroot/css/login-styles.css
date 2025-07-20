@@ -119,11 +119,11 @@ body.login-page {
     height: 100%;
     background:
         /* Tono azul claro reemplazando el verde */
-        radial-gradient(circle at 20% 80%, rgba(66, 153, 225, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, #1f71c3c3 0%, transparent 50%),
         /* Tono azul oscuro (original) */
-        radial-gradient(circle at 80% 20%, rgba(0, 45, 86, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, #0f2e51cc 0%, transparent 50%),
         /* Tono azul muy claro (casi blanco) reemplazando el gris */
-        radial-gradient(circle at 40% 40%, rgba(173, 216, 230, 0.2) 0%, transparent 50%);
+        radial-gradient(circle at 40% 40%, #EC7437 0%, transparent 50%);
     animation: gradientFlow 15s ease-in-out infinite;
     z-index: 0;
     /* Asegúrate de que el contenido del hero esté por encima con un z-index superior */
@@ -132,9 +132,12 @@ body.login-page {
 @keyframes gradientFlow {
     50% {
         background:
-            radial-gradient(circle at 80% 20%, rgba(11, 138, 174, 0.3) 0%, transparent 50%),
-            radial-gradient(circle at 20% 80%, rgba(2, 35, 54, 0.4) 0%, transparent 50%),
-            radial-gradient(circle at 60% 60%, rgba(11, 138, 174, 0.2) 0%, transparent 50%);
+            /* Tono azul claro reemplazando el verde */
+            radial-gradient(circle at 20% 80%, #1f71c3c3 0%, transparent 50%),
+            /* Tono azul oscuro (original) */
+            radial-gradient(circle at 80% 20%, #0f2e51cc 0%, transparent 50%),
+            /* Tono azul muy claro (casi blanco) reemplazando el gris */
+            radial-gradient(circle at 40% 40%, #EC7437 0%, transparent 50%);
     }
 }
 
